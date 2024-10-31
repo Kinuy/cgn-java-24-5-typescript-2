@@ -56,3 +56,27 @@ console.log(newNumbers2)
 
 
 //Bonus:
+const list: number[] = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
+
+const sortedList = list.sort((a,b)=>b-a)
+
+console.log(sortedList)
+
+const squaredList = list.sort((a,b)=>b-a).map((element)=>element * element)
+
+console.log(squaredList)
+
+const trimmedList = squaredList.slice(4, -2);
+
+console.log(trimmedList)
+
+const notDivisableBy4List = trimmedList.filter((element)=>{return element%4});
+
+console.log(notDivisableBy4List)
+
+const addAllNumbersInList = notDivisableBy4List.reduce((current,post)=>{return current + post});
+
+console.log(addAllNumbersInList)
+
+
+
